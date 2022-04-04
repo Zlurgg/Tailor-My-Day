@@ -3,26 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/HomeFragment">
+
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="co.uk.jbrightman.tailormyday.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/HomeFragment"
+        android:name="co.uk.jbrightman.tailormyday.fragments.HomeFragment"
+        android:label="@string/landing_page_fragment_label"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_JournalFragment"
+            app:destination="@id/JournalFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_GoalsFragment"
+            app:destination="@id/GoalsFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_CaloriesFragment"
+            app:destination="@id/CaloriesFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_ExerciseFragment"
+            app:destination="@id/ExerciseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JournalFragment"
+        android:name="co.uk.jbrightman.tailormyday.fragments.JournalFragment"
+        android:label="@string/journal_fragment_label"
+        tools:layout="@layout/fragment_journal">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_JournalFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="co.uk.jbrightman.tailormyday.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/GoalsFragment"
+        android:name="co.uk.jbrightman.tailormyday.fragments.GoalsFragment"
+        android:label="@string/goals_fragment_label"
+        tools:layout="@layout/fragment_goals">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_GoalsFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/CaloriesFragment"
+        android:name="co.uk.jbrightman.tailormyday.fragments.CaloriesFragment"
+        android:label="@string/calories_fragment_label"
+        tools:layout="@layout/fragment_calories">
+
+        <action
+            android:id="@+id/action_CaloriesFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ExerciseFragment"
+        android:name="co.uk.jbrightman.tailormyday.fragments.ExerciseFragment"
+        android:label="@string/exercise_fragment_label"
+        tools:layout="@layout/fragment_exercise">
+
+        <action
+            android:id="@+id/action_ExerciseFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+
+
 </navigation>
