@@ -10,14 +10,12 @@ import co.uk.jbrightman.tailormyday.R
 import co.uk.jbrightman.tailormyday.databinding.FragmentHomeBinding
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * Home page linking other pages in
  */
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(

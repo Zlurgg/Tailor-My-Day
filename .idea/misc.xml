@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/josep/AndroidStudioProjects/Tailor-My-Day/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/josep/AndroidStudioProjects/Tailor-My-Day/app/src/main/res/layout/fragment_goals.xml" value="0.27152988855116517" />
+        <entry key="..\:/Users/josep/AndroidStudioProjects/Tailor-My-Day/app/src/main/res/layout/fragment_journal.xml" value="0.25" />
         <entry key="..\:/Users/josep/AndroidStudioProjects/TailorMyDay/app/src/main/res/layout/content_main.xml" value="0.5348731884057971" />
         <entry key="..\:/Users/josep/AndroidStudioProjects/TailorMyDay/app/src/main/res/layout/fragment_Journal.xml" value="0.5546875" />
         <entry key="..\:/Users/josep/AndroidStudioProjects/TailorMyDay/app/src/main/res/layout/fragment_calories.xml" value="0.125" />

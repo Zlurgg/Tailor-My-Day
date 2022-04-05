@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Tailor My Day</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="landing_page_fragment_label">Home</string>
     <string name="journal_fragment_label">Journal</string>
     <string name="goals_fragment_label">Goals Checklist</string>
@@ -15,4 +14,6 @@
     <string name="goals_fragment">Goals</string>
     <string name="calories_fragment">Calories</string>
     <string name="exercise_fragment">Exercise</string>
+    <string name="journal_text">entry for today</string>
+    <string name="journal_button">Done</string>
 </resources>
