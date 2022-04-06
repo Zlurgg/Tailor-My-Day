@@ -10,15 +10,18 @@
     android:paddingEnd="@dimen/layout_padding"
     tools:context=".fragments.JournalFragment">
 
-    <!--TextView
-        android:id="@+id/textview_journal"
+    <TextView
+        android:id="@+id/journal_text"
+        style="@style/JournalStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/button_journal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/journal_fragment_label"/-->
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/journal_text_edit"

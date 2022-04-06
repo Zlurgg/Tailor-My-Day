@@ -1,13 +1,17 @@
 package co.uk.jbrightman.tailormyday.fragments
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.Editable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import co.uk.jbrightman.tailormyday.R
-import co.uk.jbrightman.tailormyday.databinding.FragmentJournalBinding
 
 /**
  * Journal Fragment
@@ -16,26 +20,42 @@ import co.uk.jbrightman.tailormyday.databinding.FragmentJournalBinding
  */
 class JournalFragment : Fragment() {
 
-    private var _binding: FragmentJournalBinding? = null
-
-    private val binding get() = _binding!!
+    private var journalTextEdit: EditText? = null
+    private var journalText: TextView? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater, parent: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        val view: View = inflater.inflate(R.layout.fragment_journal, parent, false)
+        Log.d(TAG, "inflate view: $view")
 
-        _binding = FragmentJournalBinding.inflate(inflater, container, false)
-        return binding.root
+        view.findViewById<Button>(R.id.done_button)?.setOnClickListener {
+            createJournalEntry()
+        }
+        return view
+    }
 
+    private fun createJournalEntry() {
+        journalTextEdit = view?.findViewById(R.id.journal_text_edit)
+        journalText = view?.findViewById(R.id.journal_text)
+
+        Log.d(TAG,"Journal Edit Text: ${journalTextEdit?.text.toString()}")
+        Log.d(TAG,"Journal Text: ${journalText?.text.toString()}")
+
+        journalTextEdit?.text = journalText?.text as Editable?
+        journalText?.visibility = View.GONE
+        view?.visibility = View.GONE
+
+        journalTextEdit?.visibility = View.VISIBLE
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
     }
 }
