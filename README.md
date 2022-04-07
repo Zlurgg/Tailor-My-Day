@@ -4,6 +4,7 @@ General helper application built around what I do on a daily basis
 
 ### Journal
 - General update section (text entry)
+- Calander view to retrive previous entries
 - Log Mood
 - Daily goals 
 - Tracking of weekly / monthly longer term goals
