@@ -1,9 +1,7 @@
 package co.uk.jbrightman.tailormyday.fragments
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,29 +25,22 @@ class JournalFragment : Fragment() {
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_journal, parent, false)
         view.findViewById<Button>(R.id.done_button)?.setOnClickListener {
-            submitJournalEntry()
-//            updateJournalEntry()
+            updateJournalEntry()
             hideTheKeyboard()
         }
         return view
     }
 
-    private fun submitJournalEntry() {
+    private fun updateJournalEntry() {
         val journalEditText = view?.findViewById<EditText>(R.id.journal_text_edit)
         val journalTextView = view?.findViewById<TextView>(R.id.journal_text)
-        Log.d(TAG,"Journal Edit Text: ${journalEditText?.text.toString()}")
-        Log.d(TAG,"Journal Text: ${journalTextView?.text.toString()}")
+        val doneButton = view?.findViewById<Button>(R.id.done_button)
 
         journalTextView?.text = journalEditText?.text
-        Log.d(TAG,"Journal Text Updated: ${journalTextView?.text.toString()}")
 
         journalEditText?.visibility = View.GONE
-        view?.visibility = View.GONE
+        doneButton?.visibility = View.GONE
         journalTextView?.visibility = View.VISIBLE
-    }
-
-    private fun updateJournalEntry() {
-        TODO("Not yet implemented")
     }
 
     private fun hideTheKeyboard() {
