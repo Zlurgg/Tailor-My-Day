@@ -23,4 +23,6 @@ General helper application built around what I do on a daily basis
 - Interval timer
 - 
 ### Figma UI Design
-https://www.figma.com/file/YD1INmqmrqN6wugzYPZkur/Daily-App-UI?node-id=0%3A1
+https://www.figma.com/file/YD1INmqmrqN6wugzYPZkur/Daily-App-UI?node-id=0%3A1  
+
+Lots of this folded into The Day To
